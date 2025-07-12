@@ -32,6 +32,6 @@ with ThreadPoolExecutor(max_workers=30) as executor:
     futures = [executor.submit(convert_chunk, i, chunk) for i, chunk in enumerate(chunks)]
 
     for future in as_completed(futures):
-        print(f"✅ Created: {future.result()}")
+        print(f"Created: {future.result()}")
 
-print("✅ Audio chunks created. Now combine them in Audacity or another audio tool.")
+print("Audio chunks created. Now combine them in Audacity or another audio tool.")
